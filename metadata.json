@@ -1,0 +1,5 @@
+{
+  "name": "Predator–Prey Neural Playground",
+  "description": "A simulation of three prey mice and a predator in a walled arena. Agents learn to survive and hunt using layered neural mechanisms, including reflexes, homeostatic drives, and reinforcement learning. The application provides a transparent view into the agents' neural states, visualizing their sensory inputs and decision-making processes in real-time.",
+  "requestFramePermissions": []
+}

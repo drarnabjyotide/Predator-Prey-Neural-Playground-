@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Predator–Prey Neural Playground</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* A more pronounced glow effect for neural visualizations */
+        .neuron-glow-high {
+            filter: drop-shadow(0 0 3px rgba(255, 255, 255, 1)) drop-shadow(0 0 8px rgba(255, 220, 100, 0.9)) drop-shadow(0 0 15px rgba(255, 180, 0, 0.6));
+        }
+        .neuron-glow-medium {
+             filter: drop-shadow(0 0 4px rgba(255, 255, 200, 0.8)) drop-shadow(0 0 8px rgba(255, 220, 100, 0.5));
+        }
+
+        /* Animations for the new Sensory Input display */
+        @keyframes pulse-danger {
+            0% { transform: scale(0.98); opacity: 0.8; }
+            70% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(0.98); opacity: 0.8; }
+        }
+        @keyframes pulse-signal {
+            from {
+                stroke-opacity: 1;
+                r: 4px;
+            }
+            to {
+                stroke-opacity: 0;
+                r: 12px;
+            }
+        }
+        .animate-pulse-danger {
+            animation: pulse-danger 1s ease-in-out infinite;
+        }
+        .animate-pulse-signal {
+            animation: pulse-signal 1.2s ease-out infinite;
+        }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-900 text-gray-100">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
